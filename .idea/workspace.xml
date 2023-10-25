@@ -4,13 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc80d312-6b5a-43a8-bca8-7ee0bd44abf9" name="Changes" comment="Initial commit`">
+    <list default="true" id="99f8df43-f340-4165-927f-7290a4c7f367" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/HotelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/HotelsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/HotelsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/HotelsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/RoomsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/RoomsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/famu/booking/BookingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/famu/booking/BookingApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,21 +45,33 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
-  <component name="ProjectId" id="2XApQgIxGbdwAhljOZp4KmDCQkc" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2Wuh2vSsOvKj6BFJb4zZeafKcIy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jalyn/OneDrive/Documents/GitHub/booking-api-part-2-jalynmb",
+    "last_opened_file_path": "C:/Users/jalyn/OneDrive/Documents/GitHub/booking-api-part-1-jalynmb/src/main/java/edu/famu/booking",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,35 +82,49 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jalyn\OneDrive\Documents\GitHub\booking-api-part-2-jalynmb" />
+      <recent name="C:\Users\jalyn\OneDrive\Documents\GitHub\booking-api-part-1-jalynmb\src\main\java\edu\famu\booking" />
+      <recent name="C:\Users\jalyn\OneDrive\Documents\GitHub\booking-api-part-1-jalynmb" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.famu.booking.Service" />
+      <recent name="edu.famu.booking.Controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="booking-api-part-1-jalynmb" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="booking-api-part-1-jalynmb" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Booking" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.famu.booking.BookingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fc80d312-6b5a-43a8-bca8-7ee0bd44abf9" name="Changes" comment="" />
-      <created>1698081727435</created>
+      <changelist id="99f8df43-f340-4165-927f-7290a4c7f367" name="Changes" comment="" />
+      <created>1697588170002</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698081727435</updated>
-      <workItem from="1698081729089" duration="9073000" />
+      <updated>1697588170002</updated>
+      <workItem from="1697588171275" duration="28490000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1698086482567</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698086482567</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

@@ -1,15 +1,12 @@
 package edu.famu.booking.Service;
 
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.CollectionReference;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.QuerySnapshot;
+import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import edu.famu.booking.Model.Rooms;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 @Service
@@ -55,5 +52,39 @@ public class RoomsService {
         DocumentSnapshot document = future.get();
 
         return documentSnapshotToRooms(document);
+    }
+
+    public String createRooms(Rooms rooms) throws ExecutionException, InterruptedException {
+        String roomId = null;
+        ApiFuture<DocumentReference> future = firestore.collection("Rooms").add(rooms);
+        DocumentReference postRef = future.get();
+        roomId = postRef.getId();
+
+        return roomId;
+    }
+
+    public void updateRooms(String id, Map<String, String> updateValues)
+    {
+        String [] allowed = {"roomType", "price", "rating", "capacity", "description", "availability", "images", "createdAt"};
+        List<String> list = Arrays.asList(allowed);
+        Map<String, Object> formattedValues = new HashMap<>();
+
+        for(Map.Entry<String, String> entry : updateValues.entrySet()){
+            String key = entry.getKey();
+            if(list.contains(key))
+                formattedValues.put(key, entry.getValue());
+        }
+        DocumentReference RoomDoc = firestore.collection("Rooms").document(id);
+        if(RoomDoc != null)
+            RoomDoc.update(formattedValues);
+    }
+
+    public void deleteRooms(String roomId) {
+        CollectionReference roomsCollection = firestore.collection("Rooms");
+        DocumentReference roomDoc = roomsCollection.document(roomId);
+
+        if (roomDoc != null) {
+            roomDoc.delete();
+        }
     }
 }

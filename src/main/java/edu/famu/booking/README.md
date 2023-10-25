@@ -83,6 +83,5 @@ All URIs start with: `http://localhost:8080/api/v1`
 |children|integer|
 |pricePerNight|double|
 
-3. Create an endpoint thhat allows the user to create a reservation. ***(2 points)***
+3. Create an endpoint that allows the user to create a reservation. ***(2 points)***
     - Add this end point to the table if you create it.
-

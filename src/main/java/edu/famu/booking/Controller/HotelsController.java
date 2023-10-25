@@ -1,12 +1,16 @@
 package edu.famu.booking.Controller;
 
+import edu.famu.booking.Model.Hotels;
+import edu.famu.booking.Model.Rooms;
 import edu.famu.booking.Service.HotelsService;
 import edu.famu.booking.Util.ApiResponse;
+import org.apache.catalina.filters.AddDefaultCharsetFilter;
+import org.glassfish.jersey.internal.Errors;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/hotels")
@@ -18,75 +22,56 @@ public class HotelsController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse> getAllHotels()
-    {
-        try{
+    public ResponseEntity<ApiResponse> getAllHotels() {
+        try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.getAllHotels(), null));
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
         }
     }
 
     @GetMapping("/{hotelId}")
-    public ResponseEntity<ApiResponse> getHotelsById(@PathVariable String hotelID){
-        try{
+    public ResponseEntity<ApiResponse> getHotelsById(@PathVariable String hotelID) {
+        try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.getHotelsById(hotelID), null));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
+
+    @PostMapping
+    public ResponseEntity<ApiResponse> createHotel(@RequestBody Hotels hotels) {
+        try {
+            return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.createHotels(hotels), null));
+        }
+        catch (ExecutionException e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+        catch (InterruptedException e) {
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
+
+    @PutMapping("/{hotelId}")
+    public ResponseEntity<ApiResponse> updateHotel(@PathVariable String id, @RequestBody Map<String,String> data){
+        try{
+            hotelsService.updateHotels(id, data);
+            return ResponseEntity.ok(new ApiResponse(true, "Hotel successfully updated",null,null));
+        }
+        catch (Exception e){
+            return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
+        }
+    }
+
+    @DeleteMapping("/{roomId}")
+    public ResponseEntity<ApiResponse> deleteHotel(@PathVariable String hotelId) {
+        try {
+            hotelsService.deleteHotels(hotelId);
+            return ResponseEntity.ok(new ApiResponse(true, "Hotel successfully deleted", null, null));
         }
         catch (Exception e) {
             return ResponseEntity.status(500).body(new ApiResponse(false, "An error occurred.", null, e.getMessage()));
         }
     }
-
-    @PostMapping("/")
-    public ResponseEntity<Map<String,Object>> createHotel(@RequestBody Hotels hotel){
-        try{
-            payload = hotelsService.createHotel(hotel);
-            statusCode = 201;
-            name = "hotelId";
-        } catch (ExecutionException | InterruptedException e) {
-            payload = new ErrorMessage("Cannot create new hotel in database.", CLASS_NAME, e.toString());
-        }
-
-        response = new ResponseWrapper(statusCode,name, payload);
-
-        return response.getResponse();
-    }
-
-    @PutMapping("/{hotelId}")
-    public ResponseEntity<Map<String,Object>> updatePost(@PathVariable(name="hotelId") String id, @RequestBody Map<String, Object> updateValues){
-        try{
-
-            hotelsService.updateHotel(id, updateValues);
-            statusCode = 201;
-            name = "message";
-            payload = "Update successful for hotel with id " + id;
-
-        }catch (ParseException e){
-            statusCode = 400;
-            payload = new ErrorMessage("Cannot parse JSON",CLASS_NAME, e.toString());
-        }
-        catch (Exception e) {
-            payload = new ErrorMessage("Cannot update hotel with id " + id,CLASS_NAME, e.toString());
-        }
-
-        response = new ResponseWrapper(statusCode,name, payload);
-
-        return response.getResponse();
-    }
-
-    @DeleteMapping("/{hotelId}")
-    public ResponseEntity<Map<String,Object>> removePost(@PathVariable(name="hotelId") String id){
-        try{
-            hotelsService.deleteHotel(id);
-            statusCode = 204;
-            name = "message";
-            payload = "Delete successful for hotel with id " + id;
-        }catch (Exception e){
-            payload = new ErrorMessage("Cannot delete hotel with id " + id, CLASS_NAME, e.toString());
-        }
-        response = new ResponseWrapper(statusCode,name, payload);
-
-        return response.getResponse();
-    }
 }
+
