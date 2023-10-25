@@ -17,18 +17,18 @@
 
 All URIs start with: `http://localhost:8080/api/v1`
 
-| Network         | Description                                   | 
-|-----------------|-----------------------------------------------| 
-| `/bookings`     | Retrieves all bookings                        | 
-| `/booking/{id}` | Retrieves a specific booking based on it's ID |
-| `/hotels`       | Retrieves all hotels                          | 
-| `/hotel/{id}`   | Retrieves a specific hotel based on it's ID   |
-| `/reviews`      | Retrieves all reviews                         | 
-| `/review/{id}`  | Retrieves a specific review based on it's ID  |
-| `/rooms`        | Retrieves all rooms                           | 
-| `/room/{id}`    | Retrieves a specific room based on it's ID    |
-| `/users`        | Retrieves all users                           | 
-| `/user/{id}`    | Retrieves a specific user based on it's ID    |
+| Action | Network         | Description                                   | 
+|--------|-----------------|-----------------------------------------------| 
+|        | `/bookings`     | Retrieves all bookings                        | 
+|        | `/booking/{id}` | Retrieves a specific booking based on it's ID |
+|        | `/hotels`       | Retrieves all hotels                        | 
+|        | `/hotel/{id}`   | Retrieves a specific hotel based on it's ID |
+|        | `/reviews`      | Retrieves all reviews                       | 
+|        | `/review/{id}`  | Retrieves a specific review based on it's ID |
+|        | `/rooms`        | Retrieves all rooms                         | 
+|        | `/room/{id}`    | Retrieves a specific room based on it's ID  |
+|        | `/users`        | Retrieves all users                         | 
+|        | `/user/{id}`    | Retrieves a specific user based on it's ID  |
 
 ### Part 1 Stretch Stories
 
@@ -40,27 +40,36 @@ All URIs start with: `http://localhost:8080/api/v1`
 
 ### Part 2 Required Stories
 
-- Create an endpoint for each of the major classes (Hotel, Room, User) ***(9 points)***
+- [x] Create an endpoint for each of the major classes (Hotel, Room, User) ***(9 points)***
     - [x] Create the required models, controllers, and services
-    - Each controller should have 3 methods:
+    - [x] Each controller should have 3 methods:
         - Create a new entry
         - Update an existing entry
         - Delete an existing entry
-- Document endpoints. ***(1 point)***
+- [x] Document endpoints. ***(1 point)***
     - Add to the README file the URI for each endpoint and a description (see example below)
     - This should include **ALL** endpoints, including those from last week. *Note that there is an extra column*
 
-#### Example
+#### Endpoints
 All URIs start with: `http://localhost:8080/api/v1`
 
-|Action|Network|Description| 
-|---|---|---| 
-|`GET`|`/product`| Retrieves all products| 
-|`GET`|`/product/{id}`| Retrieves a specific product based on it's ID|
-|`POST`|`/product`| Creates a new product|
-|`PUT`|`/product/{id}`| Updates a product based on it's ID|
-|`DELETE`|`/product/{id}`| Deletes a product based on it's ID|
-
+|Action| Network      | Description                      | 
+|---|--------------|----------------------------------|
+|        | `/hotels`       | Retrieves all hotels                        | 
+|        | `/hotel/{id}`   | Retrieves a specific hotel based on it's ID |
+|`POST`| `/hotels`    | Creates a new hotel              |
+|`PUT`| `/{hotelId}` | Updates a hotel based on it's ID |
+|`DELETE`| `/{hotelId}` | Deletes a hotel based on it's ID |
+|        | `/rooms`        | Retrieves all rooms                         | 
+|        | `/room/{id}`    | Retrieves a specific room based on it's ID  |
+|`POST`| `/rooms`     | Creates a new room               |
+|`PUT`| `/{roomId}`  | Updates a room based on it's ID  |
+|`DELETE`| `/roomId}`   | Deletes a room based on it's ID  |
+|        | `/users`        | Retrieves all users                         | 
+|        | `/user/{id}`    | Retrieves a specific user based on it's ID  |
+|`POST`| `/users`     | Creates a new user               |
+|`PUT`| `/{userId}`  | Updates a user based on it's ID  |
+|`DELETE`| `/{userId}`  | Deletes a user based on it's ID  |
 ###  Part 2 Stretch Stories
 
 1. Create an endpoint that allows the user to find all hotels with a room available on a specific date. Accept the date as a query parameter ***(3 points)***
@@ -85,3 +94,6 @@ All URIs start with: `http://localhost:8080/api/v1`
 
 3. Create an endpoint that allows the user to create a reservation. ***(2 points)***
     - Add this end point to the table if you create it.
+
+## Part 2 Walkthrough
+![](https://i.imgur.com/naOYpxc.gif)

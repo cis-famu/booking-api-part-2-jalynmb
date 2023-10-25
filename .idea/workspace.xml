@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99f8df43-f340-4165-927f-7290a4c7f367" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/HotelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/HotelsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/RoomsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Controller/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/HotelsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/HotelsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/RoomsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/RoomsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/famu/booking/Service/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/famu/booking/BookingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/famu/booking/BookingApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

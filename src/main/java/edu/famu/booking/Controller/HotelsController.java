@@ -39,7 +39,7 @@ public class HotelsController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/hotels")
     public ResponseEntity<ApiResponse> createHotel(@RequestBody Hotels hotels) {
         try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.createHotels(hotels), null));
@@ -63,7 +63,7 @@ public class HotelsController {
         }
     }
 
-    @DeleteMapping("/{roomId}")
+    @DeleteMapping("/{hotelId}")
     public ResponseEntity<ApiResponse> deleteHotel(@PathVariable String hotelId) {
         try {
             hotelsService.deleteHotels(hotelId);
