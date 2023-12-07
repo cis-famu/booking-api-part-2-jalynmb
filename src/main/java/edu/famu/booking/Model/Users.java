@@ -24,13 +24,10 @@ public class Users {
     private PaymentInformation paymentInformation; //Payment information of the user, including card number, expiration date, and billing address.
     private Timestamp createdAt;
 
-    public Users(String id, String name, String email, String phone, String address, Timestamp createdAt) {
-    }
 
-
-    public void setCreatedAt(com.google.cloud.Timestamp createdAt) throws ParseException
+    public void setCreatedAt(Timestamp createdAt) throws ParseException
     {
-        this.createdAt = com.google.cloud.Timestamp.fromProto(Timestamps.parse(String.valueOf(createdAt)));
+        this.createdAt = Timestamp.fromProto(Timestamps.parse(String.valueOf(createdAt)));
     }
 }
 

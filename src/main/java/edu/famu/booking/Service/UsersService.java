@@ -5,6 +5,9 @@ import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import edu.famu.booking.Model.Hotels;
 import edu.famu.booking.Model.Users;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.boot.logging.LoggingSystemFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -14,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 public class UsersService {
 
     private Firestore firestore;
-
+    Log logger = LogFactory.getLog(this.getClass());
     public UsersService() {
         this.firestore = FirestoreClient.getFirestore();
     }
@@ -26,7 +29,8 @@ public class UsersService {
 
         if(document.exists()) {
             ArrayList<String> images = null;
-            users = new Users(document.getId(), document.getString("name"), document.getString("email"), document.getString("phone"), document.getString("address"), document.getTimestamp("createdAt"));
+
+            users = new Users(document.getId(), document.getString("name"), document.getString("email"), document.getString("phone"), document.getString("address"), null, document.getTimestamp("createdAt"));
             images = new ArrayList<>();
         }
         return users;

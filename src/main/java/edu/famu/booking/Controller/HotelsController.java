@@ -30,7 +30,7 @@ public class HotelsController {
         }
     }
 
-    @GetMapping("/{hotelId}")
+    @GetMapping("/{hotelID}")
     public ResponseEntity<ApiResponse> getHotelsById(@PathVariable String hotelID) {
         try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.getHotelsById(hotelID), null));
@@ -52,10 +52,10 @@ public class HotelsController {
         }
     }
 
-    @PutMapping("/{hotelId}")
-    public ResponseEntity<ApiResponse> updateHotel(@PathVariable String id, @RequestBody Map<String,String> data){
+    @PutMapping("/{hotelID}")
+    public ResponseEntity<ApiResponse> updateHotel(@PathVariable String hotelID, @RequestBody Map<String,String> data){
         try{
-            hotelsService.updateHotels(id, data);
+            hotelsService.updateHotels(hotelID, data);
             return ResponseEntity.ok(new ApiResponse(true, "Hotel successfully updated",null,null));
         }
         catch (Exception e){
@@ -63,7 +63,7 @@ public class HotelsController {
         }
     }
 
-    @DeleteMapping("/{hotelId}")
+    @DeleteMapping("/{hotelID}")
     public ResponseEntity<ApiResponse> deleteHotel(@PathVariable String hotelId) {
         try {
             hotelsService.deleteHotels(hotelId);

@@ -22,7 +22,7 @@ public class HotelsService {
     private Hotels documentSnapshotToHotels(DocumentSnapshot document) {
         Hotels hotels = null;
         if (document.exists()) {
-            ArrayList<String> amenities = null;
+            ArrayList<String> amenities = (ArrayList<String>) document.get("amenities");
             hotels = new Hotels(document.getId(), document.getString("name"), document.getString("description"), document.getString("address"), document.getString("contactInformation"), document.getDouble("rating"), amenities, document.getTimestamp("createdAt"));
         }
         return hotels;
