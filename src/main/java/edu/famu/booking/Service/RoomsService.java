@@ -79,9 +79,9 @@ public class RoomsService {
             RoomDoc.update(formattedValues);
     }
 
-    public void deleteRooms(String roomId) {
+    public void deleteRooms(String roomID) {
         CollectionReference roomsCollection = firestore.collection("Rooms");
-        DocumentReference roomDoc = roomsCollection.document(roomId);
+        DocumentReference roomDoc = roomsCollection.document(roomID);
 
         if (roomDoc != null) {
             roomDoc.delete();

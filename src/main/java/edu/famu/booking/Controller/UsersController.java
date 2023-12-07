@@ -30,7 +30,7 @@ public class UsersController {
         }
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/{userID}")
     public ResponseEntity<ApiResponse> getUsersById(@PathVariable String userID){
         try{
             return ResponseEntity.ok(new ApiResponse(true, "Success", usersService.getUsersById(userID), null));
@@ -53,10 +53,10 @@ public class UsersController {
         }
     }
 
-    @PutMapping("/{userId}")
-    public ResponseEntity<ApiResponse> updateUser(@PathVariable String id, @RequestBody Map<String,String> data){
+    @PutMapping("/{userID}")
+    public ResponseEntity<ApiResponse> updateUser(@PathVariable String userID, @RequestBody Map<String,String> data){
         try{
-            usersService.updateUsers(id, data);
+            usersService.updateUsers(userID, data);
             return ResponseEntity.ok(new ApiResponse(true, "User successfully updated",null,null));
         }
         catch (Exception e){

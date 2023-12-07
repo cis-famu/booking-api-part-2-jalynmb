@@ -75,9 +75,9 @@ public class HotelsService {
             HotelDoc.update(formattedValues);
     }
 
-    public void deleteHotels(String hotelId) {
+    public void deleteHotels(String hotelID) {
         CollectionReference hotelsCollection = firestore.collection("Hotels");
-        DocumentReference HotelDoc = hotelsCollection.document(hotelId);
+        DocumentReference HotelDoc = hotelsCollection.document(hotelID);
 
         if (HotelDoc != null) {
             HotelDoc.delete();

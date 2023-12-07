@@ -64,9 +64,9 @@ public class HotelsController {
     }
 
     @DeleteMapping("/{hotelID}")
-    public ResponseEntity<ApiResponse> deleteHotel(@PathVariable String hotelId) {
+    public ResponseEntity<ApiResponse> deleteHotel(@PathVariable String hotelID) {
         try {
-            hotelsService.deleteHotels(hotelId);
+            hotelsService.deleteHotels(hotelID);
             return ResponseEntity.ok(new ApiResponse(true, "Hotel successfully deleted", null, null));
         }
         catch (Exception e) {

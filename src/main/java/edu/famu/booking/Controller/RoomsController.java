@@ -29,7 +29,7 @@ public class RoomsController {
         }
     }
 
-    @GetMapping("/{roomId}")
+    @GetMapping("/{roomID}")
     public ResponseEntity<ApiResponse> getRoomsById(@PathVariable String roomID){
         try{
             return ResponseEntity.ok(new ApiResponse(true, "Success", roomsService.getRoomsById(roomID), null));
@@ -52,10 +52,10 @@ public class RoomsController {
         }
     }
 
-    @PutMapping("/{roomId}")
-    public ResponseEntity<ApiResponse> updateRoom(@PathVariable String id, @RequestBody Map<String,String> data){
+    @PutMapping("/{roomID}")
+    public ResponseEntity<ApiResponse> updateRoom(@PathVariable String roomID, @RequestBody Map<String,String> data){
         try{
-            roomsService.updateRooms(id, data);
+            roomsService.updateRooms(roomID, data);
             return ResponseEntity.ok(new ApiResponse(true, "Room successfully updated",null,null));
         }
         catch (Exception e){
@@ -63,10 +63,10 @@ public class RoomsController {
         }
     }
 
-    @DeleteMapping("/{roomId}")
-    public ResponseEntity<ApiResponse> deleteRoom(@PathVariable String roomId) {
+    @DeleteMapping("/{roomID}")
+    public ResponseEntity<ApiResponse> deleteRoom(@PathVariable String roomID) {
         try {
-            roomsService.deleteRooms(roomId);
+            roomsService.deleteRooms(roomID);
             return ResponseEntity.ok(new ApiResponse(true, "Room successfully deleted", null, null));
         }
         catch (Exception e) {
