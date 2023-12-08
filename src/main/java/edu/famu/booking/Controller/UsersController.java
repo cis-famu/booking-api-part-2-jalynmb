@@ -40,7 +40,7 @@ public class UsersController {
         }
     }
 
-    @PostMapping("/users")
+    @PostMapping("/{users}")
     public ResponseEntity<ApiResponse> createUser(@RequestBody Users users) {
         try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", usersService.createUsers(users), null));
