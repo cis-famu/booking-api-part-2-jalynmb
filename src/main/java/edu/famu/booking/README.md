@@ -96,4 +96,4 @@ All URIs start with: `http://localhost:8080/api/v1`
     - Add this end point to the table if you create it.
 
 ## Part 2 Walkthrough
-![](https://i.imgur.com/naOYpxc.gif)
+![](https://i.imgur.com/tE6COY7.gif)
