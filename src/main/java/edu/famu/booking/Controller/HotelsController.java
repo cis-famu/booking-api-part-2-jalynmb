@@ -39,7 +39,7 @@ public class HotelsController {
         }
     }
 
-    @PostMapping("/{hotels}")
+    @PostMapping
     public ResponseEntity<ApiResponse> createHotel(@RequestBody Hotels hotels) {
         try {
             return ResponseEntity.ok(new ApiResponse(true, "Success", hotelsService.createHotels(hotels), null));
